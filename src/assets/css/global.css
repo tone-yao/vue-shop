@@ -3,3 +3,12 @@ html,body,#app{
     padding: 0;
     margin: 0;
 }
+
+/* 给图标设置外边距 */
+i.iconfont{
+    margin-right: 10px;
+}
+/* 左侧权限按钮字体大小 */
+.el-submenu__title,.el-menu-item{
+    font-size: 13px;
+}
