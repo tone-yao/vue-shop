@@ -11,7 +11,7 @@
       <el-aside :width="menushow?'65px':'200px'">
         <div
           style="color:#fff; text-align:center;
-        cursor: pointer;user-select: none;font-size: 12px;"
+        cursor: pointer;user-select: none;font-size: 12px;height:25px;line-height:25px;"
           @click="menushow=!menushow"
         >|||</div>
         <el-menu
@@ -29,16 +29,10 @@
               <i :class="'iconfont'+' '+'icon-'+ iconlist[k]"></i>
               <span>{{item.authName}}</span>
             </template>
-            <el-menu-item-group>
-              <el-menu-item
-                :index="'/'+item2.path"
-                v-for="item2 in item.children"
-                :key="item2.id"
-              >
+              <el-menu-item :index="'/'+item2.path" v-for="item2 in item.children" :key="item2.id">
                 <i class="el-icon-menu"></i>
                 <span>{{item2.authName}}</span>
               </el-menu-item>
-            </el-menu-item-group>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -114,7 +108,6 @@ export default {
       user-select: none;
       font-size: 22px;
       color: #fff;
-
       img {
         width: 50px;
         height: 50px;
